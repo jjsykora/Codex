@@ -11,10 +11,10 @@ from PIL import Image
 from pydantic import BaseModel
 from transformers import AutoModel, AutoProcessor
 
-MODEL_DIR = os.getenv("MODEL_DIR", "/app/models/PE-Core-G14-448")
+MODEL_DIR = os.getenv("MODEL_DIR", "/app/models/PE-Core-S16-384")
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 
-app = FastAPI(title="PE-Core-G14-448 Embeddings API")
+app = FastAPI(title="PE-Core-S16-384 Embeddings API")
 
 
 class TextRequest(BaseModel):
